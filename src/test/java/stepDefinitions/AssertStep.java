@@ -17,9 +17,11 @@ public class AssertStep {
     public void user_verifies_that_the_APR_for_Cash_Advances_is_greater_than(Integer int1) {
 	   
 		
-   	   JavascriptExecutor jse = (JavascriptExecutor) driver;
+   	 
+	   driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	   JavascriptExecutor jse = (JavascriptExecutor) driver;
        jse.executeScript("window.scrollBy(0, 250)");
-	   
+      	   
 	   String aprText = aPage.validateAPR.getText();
        String percentageValue = aprText.split("%")[0].trim();
 
@@ -27,8 +29,10 @@ public class AssertStep {
 
        Assert.assertTrue(aprPercentage > 20.0);
        
+       System.out.println("APR for Cash Advances is greater than 20%");
+            
        driver.quit();
-
+  
      }
 
 }

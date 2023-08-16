@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         dryRun = false,
         tags = {"@run"},
         plugin = { "pretty", "html:target/cucumber-reports"},
-        monochrome = false
+        monochrome = true
 )
 public class UIRunner {
 }
