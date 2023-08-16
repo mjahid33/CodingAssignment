@@ -13,7 +13,7 @@ public class CreditCardStep {
     @When("user clicks on the “Credit Cards” icon")
     public void user_clicks_on_the_Credit_Cards_icon() {
     	ccPage.creditCards.click();
-    	driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    	driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
    
 }

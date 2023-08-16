@@ -14,7 +14,7 @@ public class ApplyNowStep {
     @When("user clicks “Apply Now” for card type: Secured Credit Card")
     public void user_clicks_Apply_Now_for_card_type_Secured_Credit_Card() throws InterruptedException {
     	anPage.applyNow.click();
-    	driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    	driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     
     }
 

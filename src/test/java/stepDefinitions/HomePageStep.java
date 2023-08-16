@@ -10,9 +10,9 @@ public class HomePageStep {
        
     @Given("User navigates to Discover HomePage")
     public void user_navigates_to_Discover_HomePage() {
-    	driver.navigate().to("https://www.discover.com/");
+    	driver.get("https://www.discover.com/");
     	driver.manage().window().maximize();
-    	driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    	driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
        
     }
 
