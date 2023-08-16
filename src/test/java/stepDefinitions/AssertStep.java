@@ -14,10 +14,14 @@ public class AssertStep {
     
    @Then("user verifies that the APR for Cash Advances is greater than {int}%")
     public void user_verifies_that_the_APR_for_Cash_Advances_is_greater_than(Integer int1) {
-    	String  aprText=aPage.validateAPR.getText();
-    	float aprValue = Float.parseFloat(aprText.replace("%", ""));
-    	
-    	assert aprValue > 20.0 : "APR for Cash Advances is not greater than 20%: " + aprValue + "%";
-    }
+	   
+	   String aprText = aPage.validateAPR.getText();
+       String percentageValue = aprText.split("%")[0].trim();
+
+       double aprPercentage = Double.parseDouble(percentageValue);
+
+       Assert.assertTrue(aprPercentage > 20.0);
+
+     }
 
 }
